@@ -9,72 +9,16 @@ import UIKit
 
 class LoginView: UIView {
     // MARK: Elements Visual
-    let titleLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Inter"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.textColor = .orange
-        lb.font = UIFont.systemFont(ofSize: 45, weight: .bold)
-        lb.textAlignment = .center
-        return lb
-    }()
+    let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 45, weight: .bold), textColor: .orange, textAlignment: .center)
+    let emailLabel = LabelDefault(text: "Email")
+    let passwordLabel = LabelDefault(text: "Senha")
     
-    let emailLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Email"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        return lb
-    }()
+    let emailTextField = TextFieldDefault(placeholder: "Informe seu email")
+    let passwordTextField = TextFieldDefault(placeholder: "Informe sua senha")
     
-    let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.layer.borderColor = UIColor.black.cgColor
-        tf.layer.borderWidth = 1
-        tf.backgroundColor = .lightGray
-        tf.layer.cornerRadius = 8
-        tf.placeholder = "Informe seu email"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        return tf
-    }()
+    let buttonLogin = ButtonDefault(title: "Entrar", titleColor: .white, backgroundColor: .orange)
     
-    let passwordLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Senha"
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        return lb
-    }()
-    
-    let passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.layer.borderColor = UIColor.black.cgColor
-        tf.layer.borderWidth = 1
-        tf.backgroundColor = .lightGray
-        tf.layer.cornerRadius = 8
-        tf.placeholder = "Informe sua senha"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        return tf
-    }()
-    
-    let buttonLogin: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setTitle("Entrar", for: .normal)
-        bt.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        bt.backgroundColor = .orange
-        bt.layer.cornerRadius = 8
-        return bt
-    }()
-    
-    let buttonRegister: UIButton = {
-        let bt = UIButton()
-        bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.setTitle("Registrar", for: .normal)
-        bt.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        bt.setTitleColor(.orange, for: .normal)
-        bt.backgroundColor = .white
-        bt.layer.cornerRadius = 8
-        return bt
-    }()
+    let buttonRegister = ButtonDefault(title: "Registrar", titleColor: .orange, backgroundColor: .white) 
     
     // MARK: Inits
     override init(frame: CGRect) {

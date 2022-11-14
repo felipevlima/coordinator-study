@@ -16,6 +16,8 @@
 		E32EE8032922F5760088580C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE8022922F5760088580C /* LoginViewController.swift */; };
 		E32EE8052922F79F0088580C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE8042922F79F0088580C /* LoginView.swift */; };
 		E32EE8092923016A0088580C /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE8082923016A0088580C /* LabelDefault.swift */; };
+		E32EE80B292305BE0088580C /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE80A292305BE0088580C /* TextFieldDefault.swift */; };
+		E32EE80D292306BE0088580C /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE80C292306BE0088580C /* ButtonDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E32EE8022922F5760088580C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E32EE8042922F79F0088580C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E32EE8082923016A0088580C /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
+		E32EE80A292305BE0088580C /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
+		E32EE80C292306BE0088580C /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				E32EE8082923016A0088580C /* LabelDefault.swift */,
+				E32EE80A292305BE0088580C /* TextFieldDefault.swift */,
+				E32EE80C292306BE0088580C /* ButtonDefault.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -195,12 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E32EE8052922F79F0088580C /* LoginView.swift in Sources */,
+				E32EE80D292306BE0088580C /* ButtonDefault.swift in Sources */,
 				E32EE7E72922F0D10088580C /* AppDelegate.swift in Sources */,
 				E32EE7E92922F0D10088580C /* SceneDelegate.swift in Sources */,
 				E32EE8002922F4970088580C /* LoginCoordinator.swift in Sources */,
 				E32EE8032922F5760088580C /* LoginViewController.swift in Sources */,
 				E32EE8092923016A0088580C /* LabelDefault.swift in Sources */,
 				E32EE7FE2922F2930088580C /* Coordinator.swift in Sources */,
+				E32EE80B292305BE0088580C /* TextFieldDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
