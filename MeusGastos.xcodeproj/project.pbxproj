@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB893D302924099400D1116D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D2F2924099400D1116D /* UIColorExtension.swift */; };
+		DB893D32292410D100D1116D /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D31292410D100D1116D /* ViewControllerDefault.swift */; };
+		DB893D342924149900D1116D /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D332924149900D1116D /* RegisterCoordinator.swift */; };
+		DB893D392924152D00D1116D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D382924152D00D1116D /* RegisterViewController.swift */; };
+		DB893D3B2924154600D1116D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D3A2924154600D1116D /* RegisterView.swift */; };
+		DB893D3E292958D200D1116D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D3D292958D200D1116D /* MainViewController.swift */; };
+		DB893D40292958DC00D1116D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D3F292958DC00D1116D /* MainView.swift */; };
+		DB893D42292958E800D1116D /* MainCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D41292958E800D1116D /* MainCoodinator.swift */; };
+		DB893D44292ACDA200D1116D /* CollectionViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */; };
+		DB893D46292AD3BC00D1116D /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */; };
 		E32EE7E72922F0D10088580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE7E62922F0D10088580C /* AppDelegate.swift */; };
 		E32EE7E92922F0D10088580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE7E82922F0D10088580C /* SceneDelegate.swift */; };
 		E32EE7F02922F0D40088580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32EE7EF2922F0D40088580C /* Assets.xcassets */; };
@@ -21,6 +31,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB893D2F2924099400D1116D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DB893D31292410D100D1116D /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
+		DB893D332924149900D1116D /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		DB893D382924152D00D1116D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DB893D3A2924154600D1116D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		DB893D3D292958D200D1116D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DB893D3F292958DC00D1116D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DB893D41292958E800D1116D /* MainCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoodinator.swift; sourceTree = "<group>"; };
+		DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDefault.swift; sourceTree = "<group>"; };
+		DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E32EE7E32922F0D10088580C /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32EE7E62922F0D10088580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32EE7E82922F0D10088580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +67,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB893D2E2924098300D1116D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB893D2F2924099400D1116D /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB893D35292414E600D1116D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				DB893D382924152D00D1116D /* RegisterViewController.swift */,
+				DB893D3A2924154600D1116D /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		DB893D3C292958C400D1116D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB893D3D292958D200D1116D /* MainViewController.swift */,
+				DB893D3F292958DC00D1116D /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		E32EE7DA2922F0D10088580C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +137,8 @@
 			children = (
 				E32EE7FD2922F2930088580C /* Coordinator.swift */,
 				E32EE7FF2922F4970088580C /* LoginCoordinator.swift */,
+				DB893D332924149900D1116D /* RegisterCoordinator.swift */,
+				DB893D41292958E800D1116D /* MainCoodinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -98,6 +146,8 @@
 		E32EE7FC2922F2790088580C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB893D3C292958C400D1116D /* Main */,
+				DB893D35292414E600D1116D /* Register */,
 				E32EE8012922F5660088580C /* Login */,
 			);
 			path = ViewControllers;
@@ -115,6 +165,7 @@
 		E32EE806292301460088580C /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				DB893D2E2924098300D1116D /* Extensions */,
 				E32EE8072923015A0088580C /* Components */,
 			);
 			path = Infrastructure;
@@ -126,6 +177,9 @@
 				E32EE8082923016A0088580C /* LabelDefault.swift */,
 				E32EE80A292305BE0088580C /* TextFieldDefault.swift */,
 				E32EE80C292306BE0088580C /* ButtonDefault.swift */,
+				DB893D31292410D100D1116D /* ViewControllerDefault.swift */,
+				DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */,
+				DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -201,12 +255,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E32EE8052922F79F0088580C /* LoginView.swift in Sources */,
+				DB893D32292410D100D1116D /* ViewControllerDefault.swift in Sources */,
+				DB893D44292ACDA200D1116D /* CollectionViewDefault.swift in Sources */,
 				E32EE80D292306BE0088580C /* ButtonDefault.swift in Sources */,
+				DB893D3B2924154600D1116D /* RegisterView.swift in Sources */,
 				E32EE7E72922F0D10088580C /* AppDelegate.swift in Sources */,
+				DB893D46292AD3BC00D1116D /* CustomCollectionViewCell.swift in Sources */,
 				E32EE7E92922F0D10088580C /* SceneDelegate.swift in Sources */,
+				DB893D342924149900D1116D /* RegisterCoordinator.swift in Sources */,
 				E32EE8002922F4970088580C /* LoginCoordinator.swift in Sources */,
 				E32EE8032922F5760088580C /* LoginViewController.swift in Sources */,
+				DB893D40292958DC00D1116D /* MainView.swift in Sources */,
+				DB893D3E292958D200D1116D /* MainViewController.swift in Sources */,
+				DB893D42292958E800D1116D /* MainCoodinator.swift in Sources */,
 				E32EE8092923016A0088580C /* LabelDefault.swift in Sources */,
+				DB893D302924099400D1116D /* UIColorExtension.swift in Sources */,
+				DB893D392924152D00D1116D /* RegisterViewController.swift in Sources */,
 				E32EE7FE2922F2930088580C /* Coordinator.swift in Sources */,
 				E32EE80B292305BE0088580C /* TextFieldDefault.swift in Sources */,
 			);
@@ -347,12 +411,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8FTKQV35B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeusGastos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,12 +439,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8FTKQV35B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeusGastos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
