@@ -12,8 +12,9 @@ class LoginViewController: ViewControllerDefault {
     // MARK: CLOUSURES
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
-    
+
     lazy var loginView: LoginView = {
+        
         let view = LoginView()
         view.backgroundColor = .white
         

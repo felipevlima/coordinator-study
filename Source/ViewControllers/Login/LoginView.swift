@@ -14,8 +14,8 @@ class LoginView: UIView {
     
     // MARK: Elements Visual
     let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 45, weight: .bold), textColor: .orange, textAlignment: .center)
-    let emailLabel = LabelDefault(text: "Email")
-    let passwordLabel = LabelDefault(text: "Senha")
+    let emailLabel = LabelDefault(text: "Email", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
+    let passwordLabel = LabelDefault(text: "Senha", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
     
     let emailTextField = TextFieldDefault(placeholder: "Email", keyboardType: .emailAddress)
     let passwordTextField = TextFieldDefault(placeholder: "Senha", isSecurityText: true)
@@ -73,7 +73,7 @@ class LoginView: UIView {
             emailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 80),
             emailLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
             emailLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
-            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 12),
+            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 6),
             emailTextField.leftAnchor.constraint(equalTo: emailLabel.leftAnchor),
             emailTextField.rightAnchor.constraint(equalTo: emailLabel.rightAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 45)
@@ -88,7 +88,7 @@ class LoginView: UIView {
             passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
             passwordLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             passwordLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 12),
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 6),
             passwordTextField.leftAnchor.constraint(equalTo: passwordLabel.leftAnchor),
             passwordTextField.rightAnchor.constraint(equalTo: passwordLabel.rightAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 45)
@@ -128,7 +128,7 @@ class LoginView: UIView {
         self.registerLabel.addGestureRecognizer(labelTap)
         
         NSLayoutConstraint.activate([
-            registerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
+            registerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -52),
             registerLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24)
         ])
     }

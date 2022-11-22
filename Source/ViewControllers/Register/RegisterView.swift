@@ -15,8 +15,8 @@ class RegisterView: UIView {
     let titleLabel = LabelDefault(text: "Boas-vindas!", font: UIFont.systemFont(ofSize: 18, weight: .semibold), textColor: .black, textAlignment: .center)
     let descriptionText = LabelDefault(text: "Para começar, informe pra gente seu nome e sua data de nascimento.", font: UIFont.systemFont(ofSize: 15), textColor: .gray, textAlignment: .left)
     let secondDescriptionText = LabelDefault(text: "Caso esteja abrindo uma conta para uma pessoa menor de idade, preencha com o nome e a data de nascimento da pessoa.", font: UIFont.systemFont(ofSize: 15), textColor: .gray, textAlignment: .left)
-    let emailLabel = LabelDefault(text: "Nome")
-    let passwordLabel = LabelDefault(text: "Data de nascimento")
+    let emailLabel = LabelDefault(text: "Nome", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
+    let passwordLabel = LabelDefault(text: "Data de nascimento", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
     let emailTextField = TextFieldDefault(placeholder: "Digite seu nome completo", keyboardType: .alphabet)
     let passwordTextField = TextFieldDefault(placeholder: "DD/MM/AAAA", keyboardType: .numberPad)
     let buttonRegister = ButtonDefault(title: "Registrar usuário", titleColor: .white, backgroundColor: .orange)
@@ -95,7 +95,7 @@ class RegisterView: UIView {
             emailLabel.topAnchor.constraint(equalTo: secondDescriptionText.bottomAnchor, constant: 20),
             emailLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
             emailLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
-            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 12),
+            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 6),
             emailTextField.leftAnchor.constraint(equalTo: emailLabel.leftAnchor),
             emailTextField.rightAnchor.constraint(equalTo: emailLabel.rightAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 45)
@@ -110,7 +110,7 @@ class RegisterView: UIView {
             passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
             passwordLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             passwordLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 12),
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 6),
             passwordTextField.leftAnchor.constraint(equalTo: passwordLabel.leftAnchor),
             passwordTextField.rightAnchor.constraint(equalTo: passwordLabel.rightAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 45)

@@ -12,6 +12,7 @@ class LoginCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        
     }
     
     func start() {
@@ -24,9 +25,7 @@ class LoginCoordinator: Coordinator {
         viewController.onLoginTap = {
             self.showMainView()
         }
-        
-        self.navigationController.setNeedsStatusBarAppearanceUpdate()
-
+    
         self.navigationController.pushViewController(viewController, animated: true)
     }
     

@@ -29,13 +29,14 @@ class TextFieldDefault: UITextField {
     private func initDefault(placeholder: String) {
         self.backgroundColor = UIColor(named: "TextFieldBackground")
         self.layer.cornerRadius = 8
-//        self.placeholder = placeholder
         self.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
         )
         self.translatesAutoresizingMaskIntoConstraints = false
         self.autocapitalizationType = .none
+        self.textColor = UIColor.gray
+
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {

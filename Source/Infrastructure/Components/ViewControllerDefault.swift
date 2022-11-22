@@ -12,7 +12,6 @@ class ViewControllerDefault: UIViewController {
     var afterHideKeyboard: (() -> Void)?
     var afterShowKeyboard: ((_ heightKeyboard: CGFloat) -> Void)?
     
-    // For navigation controllers
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
