@@ -26,6 +26,14 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
                                  , textAlignment: .left)
     let backToLoginButton = ButtonDefault(title: "Sair", titleColor: .white, backgroundColor: .orange)
     
+    private let menuIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     private let chevronDown: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "chevron.compact.down")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
@@ -71,6 +79,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private func setVisualElements() {
         setTitle()
+        setMenuIcon()
         setBalance()
         setShowBills()
         setCollectionView()
@@ -80,6 +89,16 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
 
+    private func setMenuIcon() {
+        self.addSubview(menuIcon)
+        
+        NSLayoutConstraint.activate([
+            menuIcon.widthAnchor.constraint(equalToConstant: 32.0),
+            menuIcon.heightAnchor.constraint(equalToConstant: 32.0),
+            menuIcon.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
+            menuIcon.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24)
+        ])
+    }
     private func setTitle() {
         self.addSubview(titleLabel)
         
@@ -184,10 +203,10 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as! CustomCollectionViewCell
         cell.contentView.backgroundColor = .white
-        cell.contentView.layer.borderWidth = 1
+        cell.contentView.layer.borderWidth = 0.5
         cell.contentView.layer.cornerRadius = 8
         cell.contentView.layer.borderColor = UIColor.lightGray.cgColor
-        print(indexPath[1])
+//        print(indexPath[1])
         cell.configure(label: categoriesTitle[indexPath[1]], iconName: categoriesIcon[indexPath[1]])
         return cell
     }

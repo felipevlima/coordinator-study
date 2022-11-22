@@ -22,6 +22,14 @@ class RegisterView: UIView {
     let buttonRegister = ButtonDefault(title: "Registrar usuário", titleColor: .white, backgroundColor: .orange)
     let backButton = LabelDefault(text: "Voltar", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orange, textAlignment: .left)
     
+    private let chevronLeft: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "chevron.left")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -43,16 +51,15 @@ class RegisterView: UIView {
     }
     
     private func setBackButton() {
-        self.addSubview(backButton)
+        self.addSubview(chevronLeft)
         
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(buttonLoginTap))
-        self.backButton.isUserInteractionEnabled = true
-        self.backButton.addGestureRecognizer(labelTap)
+        self.chevronLeft.isUserInteractionEnabled = true
+        self.chevronLeft.addGestureRecognizer(labelTap)
         
         NSLayoutConstraint.activate([
-            backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
-            backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
-            backButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24)
+            chevronLeft.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
+            chevronLeft.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
         ])
     }
     
