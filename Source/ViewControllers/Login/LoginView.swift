@@ -147,17 +147,6 @@ class LoginView: UIView {
         ])
     }
     
-//    private func setImageView() {
-//        self.addSubview(imageView)
-//
-//        NSLayoutConstraint.activate([
-//            imageView.widthAnchor.constraint(equalToConstant: 24.0),
-//            imageView.heightAnchor.constraint(equalToConstant: 24.0),
-//
-////            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
-////            imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -24)
-//        ])
-//    }
     
     @objc
     private func buttonRegisterTap() {

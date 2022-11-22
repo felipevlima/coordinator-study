@@ -14,7 +14,6 @@ class LoginViewController: ViewControllerDefault {
     var onLoginTap: (() -> Void)?
 
     lazy var loginView: LoginView = {
-        
         let view = LoginView()
         view.backgroundColor = .white
         
