@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
-
     // MARK: CLOUSURES
     var onBackToLogin: (() -> Void)?
     var openMenu: (() -> Void)?
@@ -23,11 +22,10 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     // MARK: ELEMENTS
     let titleLabel = LabelDefault(text: "inter", font: UIFont.systemFont(ofSize: 28, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
     let balanceLabel = LabelDefault(text: "R$ 7.531,59", font: UIFont.systemFont(ofSize: 26, weight: .bold), textColor: .black, textAlignment: .left)
-    let showBills = LabelDefault(text: "Ver extrato", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orangeExtra
-                                 , textAlignment: .left)
+    let showBills = LabelDefault(text: "Ver extrato", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
     let backToLoginButton = ButtonDefault(title: "Sair", titleColor: .white, backgroundColor: .orangeExtra)
     
-    private let menuIcon: UIImageView = {
+    let menuIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +33,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         return imageView
     }()
     
-    private let chevronDown: UIImageView = {
+    let chevronDown: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "chevron.compact.down")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -84,7 +82,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         setBalance()
         setShowBills()
         setCollectionView()
-        setBackToLoginButton()
+//        setBackToLoginButton()
         setViewCollection()
         setChevronDown()
     }
@@ -205,7 +203,8 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     private func openMenuClick() {
         self.openMenu?()
     }
-        
+    
+    // MARK: CollectionView functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
