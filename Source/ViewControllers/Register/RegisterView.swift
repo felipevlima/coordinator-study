@@ -19,12 +19,12 @@ class RegisterView: UIView {
     let passwordLabel = LabelDefault(text: "Data de nascimento", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
     let emailTextField = TextFieldDefault(placeholder: "Digite seu nome completo", keyboardType: .alphabet)
     let passwordTextField = TextFieldDefault(placeholder: "DD/MM/AAAA", keyboardType: .numberPad)
-    let buttonRegister = ButtonDefault(title: "Registrar usuário", titleColor: .white, backgroundColor: .orange)
-    let backButton = LabelDefault(text: "Voltar", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orange, textAlignment: .left)
+    let buttonRegister = ButtonDefault(title: "Registrar usuário", titleColor: .white, backgroundColor: .orangeExtra)
+    let backButton = LabelDefault(text: "Voltar", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
     
     private let chevronLeft: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "chevron.left")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "chevron.left")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView

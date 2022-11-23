@@ -31,7 +31,7 @@ class TextFieldDefault: UITextField {
         self.layer.cornerRadius = 8
         self.attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold)]
         )
         self.translatesAutoresizingMaskIntoConstraints = false
         self.autocapitalizationType = .none

@@ -22,7 +22,7 @@ class ButtonDefault: UIButton {
     private func initDefault(title: String, titleColor: UIColor, backgroundColor: UIColor) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setTitle(title, for: .normal)
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         self.backgroundColor = backgroundColor
         self.setTitleColor(titleColor, for: .normal)
         self.layer.cornerRadius = 8

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C4F7C412-818C-4240-8F10-E8295DA76A08"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C5B4F1F-A0E2-4167-A859-C717A8D02E20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/Coordinator/OptionMenuCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "start()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C5B4F1F-A0E2-4167-A859-C717A8D02E20 - c8e5169377f0f6bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeusGastos.OptionMenuCoordinator.start() -&gt; ()"
+                  moduleName = "MeusGastos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipelima/Developer/Study/IOS-Development/coordinator-study/Source/Coordinator/OptionMenuCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "8C5B4F1F-A0E2-4167-A859-C717A8D02E20 - 51249cf37de92b52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MeusGastos.OptionMenuCoordinator.start() -&gt; ()"
+                  moduleName = "MeusGastos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipelima/Developer/Study/IOS-Development/coordinator-study/Source/Coordinator/OptionMenuCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

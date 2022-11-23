@@ -11,28 +11,28 @@ class LoginView: UIView {
     // MARK: Clousures
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
-    
+ 
     // MARK: Elements Visual
-    let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 45, weight: .bold), textColor: .orange, textAlignment: .center)
-    let emailLabel = LabelDefault(text: "Email", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
-    let passwordLabel = LabelDefault(text: "Senha", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
+    let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 45, weight: .bold), textColor: .orangeExtra, textAlignment: .center)
+    let emailLabel = LabelDefault(text: "Email", font: UIFont.systemFont(ofSize: 15, weight: .regular), textColor: .darkGray, textAlignment: .left)
+    let passwordLabel = LabelDefault(text: "Senha", font: UIFont.systemFont(ofSize: 15, weight: .regular), textColor: .darkGray, textAlignment: .left)
     
     let emailTextField = TextFieldDefault(placeholder: "Email", keyboardType: .emailAddress)
     let passwordTextField = TextFieldDefault(placeholder: "Senha", isSecurityText: true)
     
-    let buttonLogin = ButtonDefault(title: "Entrar", titleColor: .white, backgroundColor: .orange)
-    let forgotPasswordButton = ButtonDefault(title: "Esqueci minha senha", titleColor: .orange, backgroundColor: .white)
-    let registerLabel = LabelDefault(text: "Trocar ou abrir conta", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orange, textAlignment: .right)
+    let buttonLogin = ButtonDefault(title: "Entrar", titleColor: .white, backgroundColor: .orangeExtra)
+    let forgotPasswordButton = ButtonDefault(title: "Esqueci minha senha", titleColor: .orangeExtra, backgroundColor: .white)
+    let registerLabel = LabelDefault(text: "Trocar ou abrir conta", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orangeExtra, textAlignment: .right)
     
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "checkmark.shield")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "checkmark.shield")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    let iSafeLabel = LabelDefault(text: "iSafe", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orange, textAlignment: .left)
+    let iSafeLabel = LabelDefault(text: "iSafe", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
     
     // MARK: Inits
     override init(frame: CGRect) {
@@ -104,7 +104,7 @@ class LoginView: UIView {
             buttonLogin.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
             buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
-            buttonLogin.heightAnchor.constraint(equalToConstant: 45)
+            buttonLogin.heightAnchor.constraint(equalToConstant: 42)
         ])
     }
     
@@ -112,7 +112,7 @@ class LoginView: UIView {
         self.addSubview(forgotPasswordButton)
         
         NSLayoutConstraint.activate([
-            forgotPasswordButton.topAnchor.constraint(equalTo: buttonLogin.bottomAnchor, constant: 10),
+            forgotPasswordButton.topAnchor.constraint(equalTo: buttonLogin.bottomAnchor, constant: 16),
             forgotPasswordButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             forgotPasswordButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
             forgotPasswordButton.heightAnchor.constraint(equalToConstant: 45)
@@ -143,7 +143,7 @@ class LoginView: UIView {
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
             imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             iSafeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -52),
-            iSafeLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 5)
+            iSafeLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 2)
         ])
     }
     

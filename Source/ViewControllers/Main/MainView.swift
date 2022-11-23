@@ -12,6 +12,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
 
     // MARK: CLOUSURES
     var onBackToLogin: (() -> Void)?
+    var openMenu: (() -> Void)?
     
     // MARK: CONSTANTS
     let categoriesTitle = ["Cartão", "Pix", "Transferencia"]
@@ -20,15 +21,15 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     let heightScreenSize: CGFloat = UIScreen.main.bounds.height
     
     // MARK: ELEMENTS
-    let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 28, weight: .bold), textColor: .orange, textAlignment: .left)
-    let balanceLabel = LabelDefault(text: "R$ 7.531,59", font: UIFont.systemFont(ofSize: 30, weight: .bold), textColor: .black, textAlignment: .left)
-    let showBills = LabelDefault(text: "Ver extrato", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orange
+    let titleLabel = LabelDefault(text: "inter", font: UIFont.systemFont(ofSize: 28, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
+    let balanceLabel = LabelDefault(text: "R$ 7.531,59", font: UIFont.systemFont(ofSize: 26, weight: .bold), textColor: .black, textAlignment: .left)
+    let showBills = LabelDefault(text: "Ver extrato", font: UIFont.systemFont(ofSize: 14, weight: .bold), textColor: .orangeExtra
                                  , textAlignment: .left)
-    let backToLoginButton = ButtonDefault(title: "Sair", titleColor: .white, backgroundColor: .orange)
+    let backToLoginButton = ButtonDefault(title: "Sair", titleColor: .white, backgroundColor: .orangeExtra)
     
     private let menuIcon: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -36,7 +37,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let chevronDown: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "chevron.compact.down")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "chevron.compact.down")?.withTintColor(.orangeExtra, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -92,6 +93,10 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     private func setMenuIcon() {
         self.addSubview(menuIcon)
         
+        let menuTap = UITapGestureRecognizer(target: self, action: #selector(openMenuClick))
+        self.menuIcon.isUserInteractionEnabled = true
+        self.menuIcon.addGestureRecognizer(menuTap)
+        
         NSLayoutConstraint.activate([
             menuIcon.widthAnchor.constraint(equalToConstant: 32.0),
             menuIcon.heightAnchor.constraint(equalToConstant: 32.0),
@@ -128,7 +133,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         self.showBills.addGestureRecognizer(labelTap)
         
         NSLayoutConstraint.activate([
-            showBills.topAnchor.constraint(equalTo: balanceLabel.bottomAnchor, constant: 4),
+            showBills.topAnchor.constraint(equalTo: balanceLabel.bottomAnchor, constant: 20),
             showBills.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24)
         ])
     }
@@ -142,7 +147,7 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         collectionView.backgroundColor = .clear
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: showBills.bottomAnchor, constant: 20),
+            collectionView.topAnchor.constraint(equalTo: showBills.bottomAnchor, constant: 24),
             collectionView.heightAnchor.constraint(equalToConstant: calculateItemSize),
             collectionView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
             collectionView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24)
@@ -195,6 +200,11 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     private func goToBalance() {
         print("Show balance function")
     }
+    
+    @objc
+    private func openMenuClick() {
+        self.openMenu?()
+    }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -206,7 +216,6 @@ class MainView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         cell.contentView.layer.borderWidth = 0.5
         cell.contentView.layer.cornerRadius = 8
         cell.contentView.layer.borderColor = UIColor.lightGray.cgColor
-//        print(indexPath[1])
         cell.configure(label: categoriesTitle[indexPath[1]], iconName: categoriesIcon[indexPath[1]])
         return cell
     }
