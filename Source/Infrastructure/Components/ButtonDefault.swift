@@ -26,5 +26,6 @@ class ButtonDefault: UIButton {
         self.backgroundColor = backgroundColor
         self.setTitleColor(titleColor, for: .normal)
         self.layer.cornerRadius = 8
+        
     }
 }

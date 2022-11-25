@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 extension UIColor {
     static var orangeExtra: UIColor { return UIColor(named: "OrangeExtra")! }
 }

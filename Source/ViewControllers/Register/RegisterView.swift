@@ -15,11 +15,11 @@ class RegisterView: UIView {
     let titleLabel = LabelDefault(text: "Boas-vindas!", font: UIFont.systemFont(ofSize: 18, weight: .semibold), textColor: .black, textAlignment: .center)
     let descriptionText = LabelDefault(text: "Para começar, informe pra gente seu nome e sua data de nascimento.", font: UIFont.systemFont(ofSize: 15), textColor: .gray, textAlignment: .left)
     let secondDescriptionText = LabelDefault(text: "Caso esteja abrindo uma conta para uma pessoa menor de idade, preencha com o nome e a data de nascimento da pessoa.", font: UIFont.systemFont(ofSize: 15), textColor: .gray, textAlignment: .left)
-    let emailLabel = LabelDefault(text: "Nome", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
-    let passwordLabel = LabelDefault(text: "Data de nascimento", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
-    let emailTextField = TextFieldDefault(placeholder: "Digite seu nome completo", keyboardType: .alphabet)
-    let passwordTextField = TextFieldDefault(placeholder: "DD/MM/AAAA", keyboardType: .numberPad)
-    let buttonRegister = ButtonDefault(title: "Registrar usuário", titleColor: .white, backgroundColor: .orangeExtra)
+    let nameLabel = LabelDefault(text: "Nome", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
+    let birthDateLabel = LabelDefault(text: "Data de nascimento", font: UIFont.systemFont(ofSize: 15, weight: .bold), textColor: .darkGray, textAlignment: .left)
+    let nameTextField = TextFieldDefault(placeholder: "Digite seu nome completo", keyboardType: .alphabet)
+    let birthDateTextField = TextFieldDefault(placeholder: "DD/MM/AAAA", keyboardType: .numberPad)
+    let buttonRegister = ButtonDefault(title: "Continuar", titleColor: .white, backgroundColor: .orangeExtra)
     let backButton = LabelDefault(text: "Voltar", font: UIFont.systemFont(ofSize: 16, weight: .bold), textColor: .orangeExtra, textAlignment: .left)
     
     private let chevronLeft: UIImageView = {
@@ -44,8 +44,8 @@ class RegisterView: UIView {
         setTitle()
         setDescription()
         setSecondDescription()
-        setEmail()
-        setPassword()
+        setName()
+        setBirthDate()
         setRegisterButton()
         setBackButton()
     }
@@ -94,38 +94,47 @@ class RegisterView: UIView {
         ])
     }
     
-    private func setEmail() {
-        self.addSubview(emailLabel)
-        self.addSubview(emailTextField)
+    private func setName() {
+        self.addSubview(nameLabel)
+        self.addSubview(nameTextField)
+        
+        nameTextField.addTarget(self, action: #selector(nameTextFieldDidChange), for: .editingChanged)
         
         NSLayoutConstraint.activate([
-            emailLabel.topAnchor.constraint(equalTo: secondDescriptionText.bottomAnchor, constant: 20),
-            emailLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
-            emailLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
-            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 6),
-            emailTextField.leftAnchor.constraint(equalTo: emailLabel.leftAnchor),
-            emailTextField.rightAnchor.constraint(equalTo: emailLabel.rightAnchor),
-            emailTextField.heightAnchor.constraint(equalToConstant: 45)
+            nameLabel.topAnchor.constraint(equalTo: secondDescriptionText.bottomAnchor, constant: 20),
+            nameLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
+            nameLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
+            nameTextField.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 6),
+            nameTextField.leftAnchor.constraint(equalTo: nameLabel.leftAnchor),
+            nameTextField.rightAnchor.constraint(equalTo: nameLabel.rightAnchor),
+            nameTextField.heightAnchor.constraint(equalToConstant: 45)
         ])
     }
     
-    private func setPassword() {
-        self.addSubview(passwordLabel)
-        self.addSubview(passwordTextField)
+    private func setBirthDate() {
+        self.addSubview(birthDateLabel)
+        self.addSubview(birthDateTextField)
+
+        birthDateTextField.addTarget(self, action: #selector(birthDateTextFieldDidChange), for: .editingChanged)
         
         NSLayoutConstraint.activate([
-            passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
-            passwordLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
-            passwordLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 6),
-            passwordTextField.leftAnchor.constraint(equalTo: passwordLabel.leftAnchor),
-            passwordTextField.rightAnchor.constraint(equalTo: passwordLabel.rightAnchor),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 45)
+            birthDateLabel.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 30),
+            birthDateLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24),
+            birthDateLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
+            birthDateTextField.topAnchor.constraint(equalTo: birthDateLabel.bottomAnchor, constant: 6),
+            birthDateTextField.leftAnchor.constraint(equalTo: birthDateLabel.leftAnchor),
+            birthDateTextField.rightAnchor.constraint(equalTo: birthDateLabel.rightAnchor),
+            birthDateTextField.heightAnchor.constraint(equalToConstant: 45)
         ])
     }
 
     private func setRegisterButton() {
         self.addSubview(buttonRegister)
+        
+        buttonRegister.isEnabled = false
+        buttonRegister.backgroundColor = .lightGray
+        
+        buttonRegister.addTarget(self, action: #selector(pressRegister), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             buttonRegister.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
@@ -133,11 +142,36 @@ class RegisterView: UIView {
             buttonRegister.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -24),
             buttonRegister.heightAnchor.constraint(equalToConstant: 45)
         ])
+   
+    }
+    
+    @objc func nameTextFieldDidChange() {
+        isAllFildsValid()
+    }
+    
+    @objc func birthDateTextFieldDidChange() {
+        isAllFildsValid()
+    }
+    
+    @objc func isAllFildsValid() {
+        guard let name = nameTextField.text, let birthDate = birthDateTextField.text, !name.isEmpty && !birthDate.isEmpty else {
+            buttonRegister.backgroundColor = .lightGray
+            buttonRegister.isEnabled = false
+            return
+        }
+        
+        buttonRegister.backgroundColor = .orangeExtra
+        buttonRegister.isEnabled = true
     }
     
     @objc
     private func buttonLoginTap() {
         self.onLoginTap?()
+    }
+    
+    @objc
+    private func pressRegister() {
+        print("Registrou")
     }
     
 }

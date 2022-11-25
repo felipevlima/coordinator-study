@@ -35,26 +35,12 @@ class MainViewController: ViewControllerDefault {
     @objc
     private func presentateModal() {
         let actionSheet = UIAlertController(title: "O que deseja fazer?", message: "", preferredStyle: .actionSheet)
+        
         actionSheet.addAction(UIAlertAction(title: "Sair", style: .destructive, handler: { _ in
             self.onSignOutTap?()
         }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(actionSheet, animated: true)
-//        let optionMenuVc = OptionMenuViewController()
-//        let nav = UINavigationController(rootViewController: optionMenuVc)
-//
-//        nav.modalPresentationStyle = .pageSheet
-        
-//        if let sheet = optionMenuVc.sheetPresentationController {
-//            sheet.detents = [
-//                .custom { _ in
-//                    return 200
-//                }
-//            ]
-//
-//        }
-//
-//        present(optionMenuVc, animated: true, completion: nil)
     }
 }

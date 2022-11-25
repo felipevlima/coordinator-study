@@ -25,10 +25,20 @@ class LoginViewController: ViewControllerDefault {
             self.onLoginTap?()
         }
         
+        view.errorOnLogin = {
+            self.errorAlert()
+        }
+        
         return view
     }()
     
     override func loadView() {
         self.view = loginView
+    }
+    
+    @objc private func errorAlert() {
+        let alert = UIAlertController(title: "Falha no login", message: "Preencha todos os dados para realizar o login!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }

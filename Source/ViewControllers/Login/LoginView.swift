@@ -11,6 +11,7 @@ class LoginView: UIView {
     // MARK: Clousures
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
+    var errorOnLogin: (() -> Void)?
  
     // MARK: Elements Visual
     let titleLabel = LabelDefault(text: "Inter", font: UIFont.systemFont(ofSize: 45, weight: .bold), textColor: .orangeExtra, textAlignment: .center)
@@ -147,7 +148,6 @@ class LoginView: UIView {
         ])
     }
     
-    
     @objc
     private func buttonRegisterTap() {
         self.onRegisterTap?()
@@ -155,6 +155,10 @@ class LoginView: UIView {
     
     @objc
     private func doLoginTap() {
+        guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty && !password.isEmpty else {
+            self.errorOnLogin?()
+            return
+        }
         self.onLoginTap?()
     }
 }
