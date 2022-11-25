@@ -14,7 +14,6 @@
 		DB893D3E292958D200D1116D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D3D292958D200D1116D /* MainViewController.swift */; };
 		DB893D40292958DC00D1116D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D3F292958DC00D1116D /* MainView.swift */; };
 		DB893D42292958E800D1116D /* MainCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D41292958E800D1116D /* MainCoodinator.swift */; };
-		DB893D44292ACDA200D1116D /* CollectionViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */; };
 		DB893D46292AD3BC00D1116D /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */; };
 		DB893D4B292D8A2100D1116D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB893D4A292D8A2100D1116D /* UIColor.swift */; };
 		E32EE7E72922F0D10088580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32EE7E62922F0D10088580C /* AppDelegate.swift */; };
@@ -38,7 +37,6 @@
 		DB893D3D292958D200D1116D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DB893D3F292958DC00D1116D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DB893D41292958E800D1116D /* MainCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoodinator.swift; sourceTree = "<group>"; };
-		DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDefault.swift; sourceTree = "<group>"; };
 		DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB893D4A292D8A2100D1116D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/ViewControllers/OptionMenu/UIColor.swift; sourceTree = SOURCE_ROOT; };
 		E32EE7E32922F0D10088580C /* InterHML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterHML.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +176,6 @@
 				E32EE80A292305BE0088580C /* TextFieldDefault.swift */,
 				E32EE80C292306BE0088580C /* ButtonDefault.swift */,
 				DB893D31292410D100D1116D /* ViewControllerDefault.swift */,
-				DB893D43292ACDA200D1116D /* CollectionViewDefault.swift */,
 				DB893D45292AD3BC00D1116D /* CustomCollectionViewCell.swift */,
 			);
 			path = Components;
@@ -256,7 +253,6 @@
 			files = (
 				E32EE8052922F79F0088580C /* LoginView.swift in Sources */,
 				DB893D32292410D100D1116D /* ViewControllerDefault.swift in Sources */,
-				DB893D44292ACDA200D1116D /* CollectionViewDefault.swift in Sources */,
 				E32EE80D292306BE0088580C /* ButtonDefault.swift in Sources */,
 				DB893D3B2924154600D1116D /* RegisterView.swift in Sources */,
 				E32EE7E72922F0D10088580C /* AppDelegate.swift in Sources */,
