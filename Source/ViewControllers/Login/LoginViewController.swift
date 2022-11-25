@@ -13,6 +13,7 @@ class LoginViewController: ViewControllerDefault {
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
 
+    // MARK: LoadView
     lazy var loginView: LoginView = {
         let view = LoginView()
         view.backgroundColor = .white
@@ -36,6 +37,7 @@ class LoginViewController: ViewControllerDefault {
         self.view = loginView
     }
     
+    // MARK: Functions
     @objc private func errorAlert() {
         let alert = UIAlertController(title: "Falha no login", message: "Preencha todos os dados para realizar o login!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
