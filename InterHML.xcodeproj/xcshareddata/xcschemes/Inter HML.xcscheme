@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E32EE7E22922F0D10088580C"
-               BuildableName = "Inter HML.app"
-               BlueprintName = "Inter HML"
-               ReferencedContainer = "container:Inter HML.xcodeproj">
+               BuildableName = "InterHML.app"
+               BlueprintName = "InterHML"
+               ReferencedContainer = "container:InterHML.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E32EE7E22922F0D10088580C"
-            BuildableName = "Inter HML.app"
-            BlueprintName = "Inter HML"
-            ReferencedContainer = "container:Inter HML.xcodeproj">
+            BuildableName = "InterHML.app"
+            BlueprintName = "InterHML"
+            ReferencedContainer = "container:InterHML.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E32EE7E22922F0D10088580C"
-            BuildableName = "Inter HML.app"
-            BlueprintName = "Inter HML"
-            ReferencedContainer = "container:Inter HML.xcodeproj">
+            BuildableName = "InterHML.app"
+            BlueprintName = "InterHML"
+            ReferencedContainer = "container:InterHML.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -47,7 +47,7 @@
 		DB893D4A292D8A2100D1116D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/ViewControllers/OptionMenu/UIColor.swift; sourceTree = SOURCE_ROOT; };
 		DB893D4C292DA4D200D1116D /* OptionMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuView.swift; sourceTree = "<group>"; };
 		DB893D4E292DA8DB00D1116D /* OptionMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuCoordinator.swift; sourceTree = "<group>"; };
-		E32EE7E32922F0D10088580C /* Inter HML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inter HML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32EE7E32922F0D10088580C /* InterHML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterHML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32EE7E62922F0D10088580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32EE7E82922F0D10088580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E32EE7EF2922F0D40088580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		E32EE7E42922F0D10088580C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E32EE7E32922F0D10088580C /* Inter HML.app */,
+				E32EE7E32922F0D10088580C /* InterHML.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,9 +204,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E32EE7E22922F0D10088580C /* Inter HML */ = {
+		E32EE7E22922F0D10088580C /* InterHML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E32EE7F72922F0D40088580C /* Build configuration list for PBXNativeTarget "Inter HML" */;
+			buildConfigurationList = E32EE7F72922F0D40088580C /* Build configuration list for PBXNativeTarget "InterHML" */;
 			buildPhases = (
 				E32EE7DF2922F0D10088580C /* Sources */,
 				E32EE7E02922F0D10088580C /* Frameworks */,
@@ -216,9 +216,9 @@
 			);
 			dependencies = (
 			);
-			name = "Inter HML";
+			name = InterHML;
 			productName = MeusGastos;
-			productReference = E32EE7E32922F0D10088580C /* Inter HML.app */;
+			productReference = E32EE7E32922F0D10088580C /* InterHML.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E32EE7DE2922F0D10088580C /* Build configuration list for PBXProject "Inter HML" */;
+			buildConfigurationList = E32EE7DE2922F0D10088580C /* Build configuration list for PBXProject "InterHML" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -249,7 +249,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E32EE7E22922F0D10088580C /* Inter HML */,
+				E32EE7E22922F0D10088580C /* InterHML */,
 			);
 		};
 /* End PBXProject section */
@@ -493,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E32EE7DE2922F0D10088580C /* Build configuration list for PBXProject "Inter HML" */ = {
+		E32EE7DE2922F0D10088580C /* Build configuration list for PBXProject "InterHML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32EE7F52922F0D40088580C /* Debug */,
@@ -502,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E32EE7F72922F0D40088580C /* Build configuration list for PBXNativeTarget "Inter HML" */ = {
+		E32EE7F72922F0D40088580C /* Build configuration list for PBXNativeTarget "InterHML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32EE7F82922F0D40088580C /* Debug */,
